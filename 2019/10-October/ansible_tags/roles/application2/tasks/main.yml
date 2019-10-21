@@ -1,0 +1,18 @@
+- block:
+  - name: Import install tasks (install)
+    import_tasks: install.yml
+    tags:
+      - install
+
+  - name: Just for debugging (never)
+    command: echo
+    tags:
+      - never
+
+  - name: Import config tasks (configure)
+    import_tasks: configure.yml
+    tags:
+      - configure
+
+  tags:
+    - application2

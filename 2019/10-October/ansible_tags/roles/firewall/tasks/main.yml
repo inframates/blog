@@ -1,0 +1,4 @@
+- name: Include config tasks ()
+  include_tasks: configure.yml
+  tags:
+    - firewall

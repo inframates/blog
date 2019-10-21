@@ -1,0 +1,5 @@
+dependencies:
+  - role: repository
+    vars:
+      repos:
+        - repo_app2

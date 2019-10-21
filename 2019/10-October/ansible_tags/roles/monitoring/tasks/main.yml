@@ -1,0 +1,13 @@
+- block:
+  - name: Install monitoring packages (install)
+    command: echo
+    tags:
+      - install
+
+  - name: Configure monitoring (configure)
+    command: echo
+    tags:
+      - configure
+
+  tags:
+    - monitoring

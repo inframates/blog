@@ -1,0 +1,5 @@
+- name: Restart Application1 (invalid_tag)
+  command: echo
+  listen: restart app1
+  tags:
+    - invalid_tag

@@ -1,0 +1,37 @@
+#!/usr/bin/env ansible-playbook
+
+- name: Deploy Application 1
+  hosts: localhost
+  connection: local
+  become: no
+  roles:
+    - role: logging
+      tags:
+        - role_tag_from_play
+    - role: application1
+    - role: firewall
+    - role: monitoring
+      tags:
+        - always
+  tags:
+    - first_play
+
+- name: Deploy Application 2
+  hosts: localhost
+  connection: local
+  become: no
+  roles:
+    - role: logging
+    - role: application2
+    - role: firewall
+    - role: monitoring
+  tags:
+    - second_play
+
+- name: An untagged task
+  hosts: localhost
+  connection: local
+  become: no
+  tasks:
+    - name: Unatgged task
+      command: echo

@@ -1,0 +1,9 @@
+- name: Configure Application1 (configure)
+  command: echo
+  notify: restart app1
+  tags:
+    - configure
+
+- name: Configure Application1 without tag ()
+  command: echo
+  notify: restart app1

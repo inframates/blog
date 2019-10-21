@@ -1,0 +1,19 @@
+- block:
+  - name: Include install tasks (install)
+    include_tasks: install.yml
+    tags:
+      - install
+
+  - name: Just for debugging (never, debug)
+    command: echo
+    tags:
+      - never
+      - debug
+
+  - name: Include config tasks (configure)
+    include_tasks: configure.yml
+    tags:
+      - configure
+
+  tags:
+    - application1

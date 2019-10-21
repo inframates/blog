@@ -1,0 +1,6 @@
+- name: Drop firewall config (configure)
+  command: echo
+  notify: reload firewall
+  tags:
+    - configure
+    - firewall

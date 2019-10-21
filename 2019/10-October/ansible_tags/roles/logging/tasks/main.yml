@@ -1,0 +1,13 @@
+- block:
+  - name: Install logging packages (install)
+    command: echo
+    tags:
+      - install
+
+  - name: Configure logging (configure)
+    command: echo
+    tags:
+      - configure
+
+  tags:
+    - logging

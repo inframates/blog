@@ -1,0 +1,7 @@
+dependencies:
+  - role: repository
+    vars:
+      repos:
+        - repo_app1
+    tags:
+      - install

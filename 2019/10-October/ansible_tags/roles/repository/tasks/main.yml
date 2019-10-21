@@ -1,0 +1,6 @@
+- name: Configure repository (configure)
+  command: echo
+  loop: "{{ repos }}"
+  tags:
+    - configure
+    - repository

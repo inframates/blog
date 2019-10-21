@@ -1,0 +1,4 @@
+- name: Install Application1 (install)
+  command: echo
+  tags:
+    - install
